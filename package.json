@@ -1,0 +1,34 @@
+{
+  "name": "appointment-backend",
+  "version": "1.0.0",
+  "description": "Appointments CRUD Backend",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marioxe301/appointment-backend.git"
+  },
+  "keywords": [
+    "Backend",
+    "CRUD",
+    "Firestore",
+    "Express"
+  ],
+  "author": "Mario Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marioxe301/appointment-backend/issues"
+  },
+  "homepage": "https://github.com/marioxe301/appointment-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^9.1.1",
+    "joi": "^17.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
