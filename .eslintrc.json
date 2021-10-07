@@ -9,5 +9,7 @@
         "ecmaVersion": 12
     },
     "rules": {
+        "require-await": "error",
+        "semi": [2, "always"]
     }
 }

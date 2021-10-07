@@ -8,6 +8,6 @@ const validateSchema = async (req,res,next) =>{
         res.status(422);
         res.json(error);
     }
-}
+};
 
 module.exports = validateSchema;

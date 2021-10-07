@@ -8,7 +8,7 @@ const getDocumentsByCollection = async (name) =>{
             data.push({
                 docId: doc.id,
                 fields: doc.data()
-            })
+            });
         });
         return data;
     }catch(error){
@@ -22,12 +22,12 @@ const postDocumentToCollection = async (name, object) =>{
     try {
         const collectionReference = firestoreContext.collection(name);
         const response = await collectionReference.add(object);
-        const addedDocument = await response.get()
+        const addedDocument = await response.get();
 
         return {
             docId: addedDocument.id,
             fields: addedDocument.data()
-        }
+        };
     }catch (error){
         console.error(error);
         return error;
@@ -54,7 +54,7 @@ const deleteDocumentInCollection = async (name,docId)=>{
         return {
             status: 'OK',
             message: `Document ${docId} Deleted`
-        }
+        };
     }catch(error){
         console.error(error);
         return error;
@@ -67,4 +67,4 @@ module.exports={
     postDocumentToCollection,
     updateDocumentInCollection,
     deleteDocumentInCollection
-}
+};
