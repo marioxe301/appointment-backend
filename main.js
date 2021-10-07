@@ -30,6 +30,12 @@ app.get('/',(req,res)=>{
 
 
 
-app.listen(app.get('port'), ()=>{
+const server = app.listen(app.get('port'), ()=>{
     console.log(`REST API Running on port ${app.get('port')}`);
 });
+
+
+module.exports = {
+    app,
+    server
+};
