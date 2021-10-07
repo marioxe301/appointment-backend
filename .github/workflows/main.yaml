@@ -1,7 +1,7 @@
-name: Javascript Eslint
+name: Eslint and TDD Tests
 on: push
 jobs:
-  check-lint:
+  check_lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -9,12 +9,12 @@ jobs:
       run: npm install
     - name: Run ESLint
       run: npm run lint
-  run-tests:
-    needs: check-link
+  run_tests:
+    needs: check_lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
       run: npm install
-    - name: Run ESLint
+    - name: Run Tests with Jest
       run: npm run test
