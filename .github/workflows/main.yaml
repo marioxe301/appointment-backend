@@ -12,6 +12,8 @@ jobs:
   run_tests:
     needs: check_lint
     runs-on: ubuntu-latest
+    env:
+      FIREBASE_CRED: ${{ secrets.FIREBASE_CRED }}
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
